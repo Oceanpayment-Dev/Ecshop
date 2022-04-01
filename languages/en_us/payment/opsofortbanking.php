@@ -10,19 +10,19 @@
  * 使用；不允许对程序代码以任何形式任何目的的再发布。
  * ============================================================================
  * $Author: pan $
- * $Id: opinstanttransfer.php 17217 2014-10-20 06:29:08Z liubo $
+ * $Id: opsofortbanking.php 17217 2014-12-26 09:42:08Z liubo $
  */
 
 global $_LANG;
 
-$_LANG['opinstanttransfer']   = 'InstantTransfer支付網關';
-$_LANG['opinstanttransfer_desc']    = 'InstantTransfer支付網關';
+$_LANG['opsofortbanking']   = 'Sofortbanking Payment';
+$_LANG['opsofortbanking_desc']    = 'Sofortbanking Payment';
 
-$_LANG['account'] = '賬戶號';
-$_LANG['terminal'] = '終端號terminal';
+$_LANG['account'] = 'Account';
+$_LANG['terminal'] = 'Terminal';
 $_LANG['secureCode']     = 'secureCode';
-$_LANG['instanttransferHandler'] = 'Oceanpayment支付接口的網址正式地址';
-$_LANG['pay_button'] = '立即使用InstantTransfer支付';
+$_LANG['sofortbankingHandler'] = 'Oceanpayment transaction URL';
+$_LANG['pay_button'] = 'Pay by Sofortbanking';
 
 
 ?>

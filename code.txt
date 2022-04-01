@@ -1,5 +1,5 @@
-//获取钱海InstantTransfer支付方式(开始)
-if ($_REQUEST['code'] == 'opinstanttransfer' && $_REQUEST['success'] == '1')
+//获取钱海Sofortbanking支付方式(开始)
+if ($_REQUEST['code'] == 'opsofortbanking' && $_REQUEST['success'] == '1')
 {
 	$msg = $_LANG['pay_success'];
 	assign_template();
@@ -15,7 +15,7 @@ if ($_REQUEST['code'] == 'opinstanttransfer' && $_REQUEST['success'] == '1')
 
 	$smarty->display('respond.dwt');
 	exit();
-}elseif($_REQUEST['code'] == 'opinstanttransfer' && $_REQUEST['success'] == '0'){
+}elseif($_REQUEST['code'] == 'opsofortbanking' && $_REQUEST['success'] == '0'){
 	$msg = $_LANG['pay_fail'];
 	assign_template();
 	$position = assign_ur_here();
@@ -31,4 +31,4 @@ if ($_REQUEST['code'] == 'opinstanttransfer' && $_REQUEST['success'] == '1')
 	$smarty->display('respond.dwt');
 	exit();
 }
-//获取钱海InstantTransfer支付方式(结束)
+//获取钱海Sofortbanking支付方式(结束)

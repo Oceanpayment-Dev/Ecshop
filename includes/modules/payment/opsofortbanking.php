@@ -1,7 +1,7 @@
 <?php
 
 /**
- * ECSHOP Oceanpayment InstantTransfer支付插件
+ * ECSHOP Oceanpayment Sofortbanking支付插件
  * ============================================================================
  * * 版权所有 2005-2012 上海商派网络科技有限公司，并保留所有权利。
  * 网站地址: http://www.ecshop.com；
@@ -10,14 +10,14 @@
  * 使用；不允许对程序代码以任何形式任何目的的再发布。
  * ============================================================================
  * $Author: pan $
- * $Id: opinstanttransfer.php 17217 2014-10-26 09:36:08Z pan $
+ * $Id: opsofortbanking.php 17217 2014-10-26 09:36:08Z pan $
  */
 if (!defined('IN_ECS'))
 {
 	die('Hacking attempt');
 }
 
-$payment_lang = ROOT_PATH . 'languages/' . $GLOBALS['_CFG']['lang'] . '/payment/opinstanttransfer.php';
+$payment_lang = ROOT_PATH . 'languages/' . $GLOBALS['_CFG']['lang'] . '/payment/opsofortbanking.php';
 
 if (file_exists($payment_lang))
 {
@@ -37,7 +37,7 @@ if (isset($set_modules) && $set_modules == true)
 	$modules[$i]['code'] = basename(__FILE__, '.php');
 
 	/* 描述对应的语言项 */
-	$modules[$i]['desc'] = 'opinstanttransfer_desc';
+	$modules[$i]['desc'] = 'opsofortbanking_desc';
 
 	/* 是否支持货到付款 */
 	$modules[$i]['is_cod'] = '0';
@@ -46,7 +46,7 @@ if (isset($set_modules) && $set_modules == true)
 	$modules[$i]['is_online'] = '1';
 
 	/* 作者 */
-	$modules[$i]['author']  = 'Oceanpayment InstantTransfer支付';
+	$modules[$i]['author']  = 'Oceanpayment Sofortbanking支付';
 
 	/* 网址 */
 	$modules[$i]['website'] = 'http://www.oceanpayment.com.cn';
@@ -59,16 +59,16 @@ if (isset($set_modules) && $set_modules == true)
 	array('name' => 'account', 'type' => 'text', 'value' => ''),
 	array('name' => 'terminal', 'type' => 'text', 'value' => ''),
 	array('name' => 'secureCode', 'type' => 'text', 'value' => ''),
-	array('name' => 'instanttransferHandler', 'type' => 'text', 'value' => 'https://secure.oceanpayment.com/gateway/service/test'),
+	array('name' => 'sofortbankingHandler', 'type' => 'text', 'value' => 'https://secure.oceanpayment.com/gateway/service/test'),
 	);
 
 	return;
 
 }
 
-class opinstanttransfer
+class opsofortbanking
 {
-	const methods = 'InstantTransfer';
+	const methods = 'Sofortbanking';
 	/**
 	 * 构造函数
 	 *
@@ -78,13 +78,13 @@ class opinstanttransfer
 	 * @return void
 	 */
 
-	function opinstanttransfer()
+	function opsofortbanking()
 	{
 	}
 
 	function __construct()
 	{
-		$this->opinstanttransfer();
+		$this->opsofortbanking();
 	}
 
 	/**
@@ -214,7 +214,7 @@ class opinstanttransfer
 	    fclose($newfile);
 		
 	    
-		$def_url  = "<div style='text-align:center'><form  style='text-align:center;' method='post' name='instanttransfer_checkout' action='".$payment['instanttransferHandler']."' onsubmit='payment_submit()'  >";
+		$def_url  = "<div style='text-align:center'><form  style='text-align:center;' method='post' name='sofortbanking_checkout' action='".$payment['sofortbankingHandler']."' onsubmit='payment_submit()'  >";
 		$def_url .= "<input type='hidden' name='account' value='" . $account . "' />";
 		$def_url .= "<input type='hidden' name='terminal' value='" . $terminal . "' />";
 		$def_url .= "<input type='hidden' name='order_number' value='" . $order_number . "' />";
