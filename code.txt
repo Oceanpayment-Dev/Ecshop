@@ -1,0 +1,34 @@
+//获取钱海Giropay支付方式(开始)
+if ($_REQUEST['code'] == 'opgiropay' && $_REQUEST['success'] == '1')
+{
+	$msg = $_LANG['pay_success'];
+	assign_template();
+	$position = assign_ur_here();
+	$smarty->assign('page_title', $position['title']);   // 页面标题
+	$smarty->assign('ur_here',    $position['ur_here']); // 当前位置
+	$smarty->assign('page_title', $position['title']);   // 页面标题
+	$smarty->assign('ur_here',    $position['ur_here']); // 当前位置
+	$smarty->assign('helps',      get_shop_help());      // 网店帮助
+
+	$smarty->assign('message',    $msg);
+	$smarty->assign('shop_url',   $ecs->url());
+
+	$smarty->display('respond.dwt');
+	exit();
+}elseif($_REQUEST['code'] == 'opgiropay' && $_REQUEST['success'] == '0'){
+	$msg = $_LANG['pay_fail'];
+	assign_template();
+	$position = assign_ur_here();
+	$smarty->assign('page_title', $position['title']);   // 页面标题
+	$smarty->assign('ur_here',    $position['ur_here']); // 当前位置
+	$smarty->assign('page_title', $position['title']);   // 页面标题
+	$smarty->assign('ur_here',    $position['ur_here']); // 当前位置
+	$smarty->assign('helps',      get_shop_help());      // 网店帮助
+
+	$smarty->assign('message',    $msg);
+	$smarty->assign('shop_url',   $ecs->url());
+
+	$smarty->display('respond.dwt');
+	exit();
+}
+//获取钱海Giropay支付方式(结束)
