@@ -10,19 +10,20 @@
  * 使用；不允许对程序代码以任何形式任何目的的再发布。
  * ============================================================================
  * $Author: pan $
- * $Id: opgiropay.php 17217 2014-10-20 06:29:08Z liubo $
+ * $Id: opinstanttransfer.php 17217 2014-12-26 09:43:08Z liubo $
  */
 
 global $_LANG;
 
-$_LANG['opgiropay']   = 'Giropay支付網關';
-$_LANG['opgiropay_desc']    = 'Giropay支付網關';
+$_LANG['opinstanttransfer']   = 'InstantTransfer支付网关';
+$_LANG['opinstanttransfer_desc']    = 'InstantTransfer Payment.';
 
-$_LANG['account'] = '賬戶號';
-$_LANG['terminal'] = '終端號terminal';
+$_LANG['account'] = '您的账户号';
+$_LANG['terminal'] = '终端号terminal';
 $_LANG['secureCode']     = 'secureCode';
-$_LANG['giropayHandler'] = 'Oceanpayment支付接口的網址正式地址';
-$_LANG['pay_button'] = '立即使用Giropay支付';
+$_LANG['instanttransferHandler'] = 'Oceanpayment支付接口的网址正式地址';
+$_LANG['pay_button'] = '立即使用InstantTransfer支付';
+
 
 
 ?>

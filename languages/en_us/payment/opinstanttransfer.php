@@ -10,19 +10,19 @@
  * 使用；不允许对程序代码以任何形式任何目的的再发布。
  * ============================================================================
  * $Author: pan $
- * $Id: opgiropay.php 17217 2014-12-26 09:42:08Z liubo $
+ * $Id: opinstanttransfer.php 17217 2014-12-26 09:42:08Z liubo $
  */
 
 global $_LANG;
 
-$_LANG['opgiropay']   = 'Giropay Payment';
-$_LANG['opgiropay_desc']    = 'Giropay Payment';
+$_LANG['opinstanttransfer']   = 'InstantTransfer Payment';
+$_LANG['opinstanttransfer_desc']    = 'InstantTransfer Payment';
 
 $_LANG['account'] = 'Account';
 $_LANG['terminal'] = 'Terminal';
 $_LANG['secureCode']     = 'secureCode';
-$_LANG['giropayHandler'] = 'Oceanpayment transaction URL';
-$_LANG['pay_button'] = 'Pay by Giropay';
+$_LANG['instanttransferHandler'] = 'Oceanpayment transaction URL';
+$_LANG['pay_button'] = 'Pay by InstantTransfer';
 
 
 ?>
