@@ -1,22 +1,21 @@
-//获取钱海Sofortbanking支付方式(开始)
-if ($_REQUEST['code'] == 'opsofortbanking' && $_REQUEST['success'] == '1')
+
+
+1.将下列代码复制到根目录respond.php中的下列代码后面
+/* 支付方式代码 */
+$pay_code = !empty($_REQUEST['code']) ? trim($_REQUEST['code']) : '';
+
+
+
+
+//获取钱海支付方式(开始) 为了跳出iframe框架
+if ($_REQUEST['code'] == 'opcreditcard' && isset($_REQUEST['success']) )
 {
-	$msg = $_LANG['pay_success'];
-	assign_template();
-	$position = assign_ur_here();
-	$smarty->assign('page_title', $position['title']);   // 页面标题
-	$smarty->assign('ur_here',    $position['ur_here']); // 当前位置
-	$smarty->assign('page_title', $position['title']);   // 页面标题
-	$smarty->assign('ur_here',    $position['ur_here']); // 当前位置
-	$smarty->assign('helps',      get_shop_help());      // 网店帮助
-
-	$smarty->assign('message',    $msg);
-	$smarty->assign('shop_url',   $ecs->url());
-
-	$smarty->display('respond.dwt');
-	exit();
-}elseif($_REQUEST['code'] == 'opsofortbanking' && $_REQUEST['success'] == '0'){
-	$msg = $_LANG['pay_fail'];
+	if($_REQUEST['success'] == 1){
+		$msg = $_LANG['pay_success'];
+	}else{
+		$msg = $_LANG['pay_fail'];
+	}
+	
 	assign_template();
 	$position = assign_ur_here();
 	$smarty->assign('page_title', $position['title']);   // 页面标题
@@ -31,4 +30,4 @@ if ($_REQUEST['code'] == 'opsofortbanking' && $_REQUEST['success'] == '1')
 	$smarty->display('respond.dwt');
 	exit();
 }
-//获取钱海Sofortbanking支付方式(结束)
+//获取钱海支付方式(结束)
